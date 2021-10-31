@@ -1,0 +1,2 @@
+# spotify
+Ember Spotify App
