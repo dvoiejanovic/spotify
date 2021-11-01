@@ -11,6 +11,7 @@ export default class LoginScreenComponent extends Component {
         response_type: 'token',
         show_dialog: 'true',
     });
+    
     window.location.replace(authorizationUrl);
   }
 }

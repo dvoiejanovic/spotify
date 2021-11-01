@@ -19,9 +19,6 @@ export default class Redirect extends Route.extend({
     }
 
     this.authentication.setToken(parameters.accessToken);
-
-    if (this.authentication.isAuthenticated) {
-      this.transitionTo('home');
-    }
+    this.authentication.isAuthenticated ? this.transitionTo('home') : this.transitionTo('login');
   }
 }
