@@ -4,8 +4,11 @@ module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'spotify',
     environment,
-    base: 'https://api.spotify.com', 
+    authorizeUrl: 'https://accounts.spotify.com/authorize',
+    baseUrl: 'https://api.spotify.com/',
+    namespace: 'v1',
     rootURL: '/',
+    clientId: 'd4f2fe2b76994b438ee46e722f9227e1',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
