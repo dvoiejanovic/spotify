@@ -1,3 +1,26 @@
 :root {
   --raisin-black: #242223;
+  --black: #000000;
+  --white: #ffffff;
+  --crystal-bell: #efefef;
+  --tangled-web: #b3b3b3;
+  --champion-blue: #636688;
+}
+
+[data-theme='dark'] {
+  --card-bg-color: var(--raisin-black);
+  --sidebar-bg-color: var(--black);
+
+  /* Text */
+  --accent-text-color: var(--white);
+  --subtle-text-color: var(--tangled-web);
+}
+
+[data-theme='light'] {
+  --card-bg-color: aliceBlue;
+  --sidebar-bg-color: var(--crystal-bell);
+
+  /* Text */
+  --accent-text-color: var(--black);
+  --subtle-text-color: var(--champion-blue);
 }

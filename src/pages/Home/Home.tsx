@@ -1,8 +1,9 @@
+import Sidebar from "../../core/Sidebar/Sidebar";
 
 const HomePage = () => {
   return (
-    <div>
-      Home
+    <div data-theme="dark">
+      <Sidebar />
     </div>
   );
 };

@@ -6,14 +6,22 @@ import reportWebVitals from "./reportWebVitals";
 import SplashPage from "./pages/Splash/Splash";
 import HomePage from "./pages/Home/Home";
 import RedirectPage from "./pages/Redirect/Redirect";
+import PrivateRoute from "./core/PrivateRoute";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<SplashPage />} />
+        <Route path="/splash" element={<SplashPage />} />
         <Route path="/redirect" element={<RedirectPage />} />
-        <Route path="/home" element={<HomePage />} />
+        <Route
+          path="/"
+          element={
+            <PrivateRoute>
+              <HomePage />
+            </PrivateRoute>
+          }
+        />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
