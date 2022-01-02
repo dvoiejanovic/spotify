@@ -1,0 +1,29 @@
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0, 0.5);
+}
+
+.dialog {
+  min-width: 500px;
+  min-height: 400px;
+  border-radius: 8px;
+  padding: 32px;
+  background-color: var(--card-bg-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dialogHeader {
+  display: flex;
+  text-transform: capitalize;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 32px;
+  margin-bottom: 16px;
+}

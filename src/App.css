@@ -1,13 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: 'Proza Libre';
 }
 
 body {
   background-color: var(--main-bg-color);
+  color: var(--accent-text-color);
 }
 
 button {
   border: none;
+  color: white;
   background-color: var(--sidebar-bg-color);
 }
 

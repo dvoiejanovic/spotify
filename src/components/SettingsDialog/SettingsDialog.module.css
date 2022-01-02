@@ -1,0 +1,13 @@
+.message {
+  font-size: 14px;
+  color: var(--subtle-text-color);
+  margin-bottom: 16px;
+}
+
+.themeExampleCard {
+  padding: 8px 24px;
+  margin: 16px 0px;
+  width: 100%;
+  border: 1px solid white;
+  border-radius: 8px;
+}
