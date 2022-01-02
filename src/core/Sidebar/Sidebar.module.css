@@ -1,5 +1,8 @@
 .sidebar {
+  position: fixed;
+  grid-area: sidebar;
   height: 100vh;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,16 +12,20 @@
   background-color: var(--sidebar-bg-color);
 }
 
+.activeNavItem {
+  background-color: var(--sidebar-active-item-color);
+}
+
 .navItem {
   display: flex;
   padding: 8px 0px 8px 16px;
-  border-radius: 8px;
+  border-radius: 4px;
   justify-content: flex-start;
   font-size: 14px;
   gap: 16px;
-  align-items: flex-end;
+  align-items: center;
   color: var(--subtle-text-color);
-  width: 90%;
+  width: calc(100% - 16px);
 }
 
 .navItem:hover {

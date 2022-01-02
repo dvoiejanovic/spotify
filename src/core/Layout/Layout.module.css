@@ -1,0 +1,11 @@
+.layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: 64px 1fr;
+  grid-template-areas: "sidebar topbar"
+  "sidebar content";
+}
+
+.content {
+  grid-area: content;
+}
