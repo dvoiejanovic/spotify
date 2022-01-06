@@ -5,7 +5,7 @@ import {
   setTheme as setLocalTheme,
 } from "services/local-storage";
 import { getUserProfile } from "services/spotify";
-import styles from "./SettingsDialog.module.css";
+import styles from "./SettingsDialog.module.scss";
 
 interface ISettingsDialogProps {
   open: boolean;

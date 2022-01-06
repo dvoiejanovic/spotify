@@ -1,4 +1,4 @@
-import styles from "./Topbar.module.css";
+import styles from "./Topbar.module.scss";
 import { FiUser, FiChevronDown } from "react-icons/fi";
 
 const Topbar = () => {

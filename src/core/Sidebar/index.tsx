@@ -1,4 +1,4 @@
-import styles from "./Sidebar.module.css";
+import styles from "./Sidebar.module.scss";
 import { FiSearch, FiHome } from "react-icons/fi";
 import { useState } from "react";
 

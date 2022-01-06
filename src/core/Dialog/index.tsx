@@ -1,6 +1,6 @@
 import { ReactNode, useEffect, useState } from "react";
 import { FiX } from "react-icons/fi";
-import styles from "./Dialog.module.css";
+import styles from "./Dialog.module.scss";
 
 interface IDialogProps {
   open: boolean;
