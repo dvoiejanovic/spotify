@@ -5,9 +5,11 @@
 }
 
 .themeExampleCard {
-  padding: 8px 24px;
+  padding: 24px;
   margin: 16px 0px;
   width: 100%;
+  display: flex;
+  gap: 16px;
   border-radius: 8px;
 }
 
@@ -19,4 +21,26 @@
 .darkThemeExampleCard {
   background-color: var(--chinese-black);
   color: var(--tangled-web);
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+}
+
+.darkUsername {
+  color: var(--white);
+}
+
+.darkThemeDescription {
+  color: var(--tangled-web);
+}
+
+.lightUsername {
+  color: var(--black);
+}
+
+.lightThemeDescription {
+  color: var(--champion-blue);
 }

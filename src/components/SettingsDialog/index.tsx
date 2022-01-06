@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Dialog from "../../core/Dialog";
 import { getTheme, setTheme as setLocalTheme } from "../../services/local-storage";
+import { getUserProfile } from "../../services/spotify";
 import styles from "./SettingsDialog.module.css";
 
 interface ISettingsDialogProps {
@@ -10,6 +11,21 @@ interface ISettingsDialogProps {
 
 const SettingsDialog: React.FC<ISettingsDialogProps> = (props) => {
   const [theme, setTheme] = useState(getTheme());
+  const [username, setUsername] = useState();
+  const [avatar, setAvatar] = useState();
+
+  const fetchUserAvatar = () => {
+    getUserProfile().then((userProfile) => {
+      setAvatar(userProfile.images[0].url);
+      setUsername(userProfile.display_name);
+    });
+  }
+
+  useEffect(() => {
+    fetchUserAvatar();
+  }, [fetchUserAvatar]);
+
+
 
   const changeTheme = (theme: "dark" | "light") => {
     setTheme(theme);
@@ -32,8 +48,11 @@ const SettingsDialog: React.FC<ISettingsDialogProps> = (props) => {
         onChange={() => changeTheme("dark")}
       />
       <div className={`${styles.themeExampleCard} ${styles.darkThemeExampleCard}`}>
-        <div>Username</div>
-        <div>I live in a world of darkness.</div>
+        <img className={styles.avatar} src={avatar} alt=""/>
+        <div>
+          <div className={styles.darkUsername}>{username}</div>
+          <div className={styles.darkThemeDescription}>I live in a world of darkness.</div>
+        </div>
       </div>
       <label htmlFor="Light-theme-radio-button">Light </label>
       <input
@@ -44,8 +63,11 @@ const SettingsDialog: React.FC<ISettingsDialogProps> = (props) => {
         onChange={() => changeTheme("light")}
       />
       <div className={`${styles.themeExampleCard} ${styles.lightThemeExampleCard}`}>
-        <div>Username</div>
-        <div>Light as a feather.</div>
+        <img className={styles.avatar} src={avatar} alt=""/>
+        <div>
+          <div className={styles.lightUsername}>{username}</div>
+          <div className={styles.lightThemeDescription}>Light as a feather.</div>
+        </div>
       </div>
     </Dialog>
   );

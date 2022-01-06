@@ -5,7 +5,7 @@ import Layout from "../../core/Layout";
 const HomePage = () => {
   const [isSettingsDialogOpen, setIsSettingsDialogOpen] =
     useState<boolean>(false);
-
+  
   const openSettingsDialog = () => {
     setIsSettingsDialogOpen(true);
   };
