@@ -22,7 +22,7 @@ const Dialog: React.FC<IDialogProps> = (props) => {
         <div className={styles.dialog} onClick={(event) => event.stopPropagation()}>
           <div className={styles.dialogHeader}>
             {props.title}
-            <FiX onClick={props.onClose} />
+            <FiX className="clickable-icon" onClick={props.onClose} />
           </div>
           <div className={styles.dialogContent}>{props.children}</div>
         </div>

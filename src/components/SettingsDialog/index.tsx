@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Dialog from "../../core/Dialog";
-import { getTheme } from "../../services/local-storage";
+import { getTheme, setTheme as setLocalTheme } from "../../services/local-storage";
 import styles from "./SettingsDialog.module.css";
 
 interface ISettingsDialogProps {
@@ -15,7 +15,7 @@ const SettingsDialog: React.FC<ISettingsDialogProps> = (props) => {
     setTheme(theme);
     const body = document.querySelector('body');
     (body as HTMLBodyElement).dataset.theme = theme;
-    setTheme(theme)
+    setLocalTheme(theme)
   };
 
   return (
@@ -31,7 +31,7 @@ const SettingsDialog: React.FC<ISettingsDialogProps> = (props) => {
         checked={theme === 'dark'}
         onChange={() => changeTheme("dark")}
       />
-      <div className={`${styles.themeExampleCard}`}>
+      <div className={`${styles.themeExampleCard} ${styles.darkThemeExampleCard}`}>
         <div>Username</div>
         <div>I live in a world of darkness.</div>
       </div>
@@ -43,7 +43,7 @@ const SettingsDialog: React.FC<ISettingsDialogProps> = (props) => {
         checked={theme === 'light'}
         onChange={() => changeTheme("light")}
       />
-      <div className={`${styles.themeExampleCard} ${styles.negativeThemeExampleCard}`}>
+      <div className={`${styles.themeExampleCard} ${styles.lightThemeExampleCard}`}>
         <div>Username</div>
         <div>Light as a feather.</div>
       </div>

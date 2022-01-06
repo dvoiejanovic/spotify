@@ -5,36 +5,29 @@
   --dire-wolf: #282828;
   --raisin-black: #242223;
   --tangled-web: #b3b3b3;
-  --thamar-black: #242424;
+  --snow: #fafafa;
+  --chinese-black: #161616;
   --white: #ffffff;
 }
 
-[data-theme='dark'] {
+[data-theme="dark"] {
   --card-bg-color: var(--black);
-  --main-bg-color: var(--thamar-black);
+  --main-bg-color: var(--chinese-black);
   --sidebar-active-item-color: var(--dire-wolf);
   --sidebar-bg-color: var(--black);
-
-  --card-bg-negative-color: var(--white);
-  --main-bg-negative-color: var(--white);
 
   /* Text */
   --accent-text-color: var(--white);
   --subtle-text-color: var(--tangled-web);
-  --subtle-text-negative-color: var(--champion-blue);
 }
 
-[data-theme='light'] {
+[data-theme="light"] {
   --card-bg-color: var(--white);
-  --main-bg-color: var(--white);
+  --main-bg-color: var(--snow);
   --sidebar-active-item-color: #f7f7f7;
   --sidebar-bg-color: var(--crystal-bell);
-
-  --card-bg-negative-color: var(--black);
-  --main-bg-negative-color: var(--thamar-black);
 
   /* Text */
   --accent-text-color: var(--black);
   --subtle-text-color: var(--champion-blue);
-  --subtle-text-negative-color: var(--tangled-web);
 }

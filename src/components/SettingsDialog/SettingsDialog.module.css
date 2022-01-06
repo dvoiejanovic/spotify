@@ -6,13 +6,17 @@
 
 .themeExampleCard {
   padding: 8px 24px;
-  background-color: var(--main-bg-color);
   margin: 16px 0px;
   width: 100%;
   border-radius: 8px;
 }
 
-.negativeThemeExampleCard {
-  background-color: var(--main-bg-negative-color);
-  color: var(--subtle-text-negative-color);
+.lightThemeExampleCard {
+  background-color: #fafafa;
+  color: var(--champion-blue);
+}
+
+.darkThemeExampleCard {
+  background-color: var(--chinese-black);
+  color: var(--tangled-web);
 }
