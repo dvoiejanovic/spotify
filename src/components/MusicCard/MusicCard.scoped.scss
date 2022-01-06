@@ -15,5 +15,11 @@
 
   .subtitle {
     color: var(--subtle-text-color);
+    text-transform: capitalize;
+  }
+
+  .image {
+    max-width: 100%;
+    border-radius: 2px;
   }
 }

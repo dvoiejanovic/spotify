@@ -8,12 +8,13 @@ const HomePage = () => {
   const [isSettingsDialogOpen, setIsSettingsDialogOpen] = useState<boolean>(
     false
   );
+  const [image, setImage] = useState<string>("");
 
   useEffect(() => {
     getRecommendations().then((recommendations) => {
-      console.log(recommendations);
+      setImage(recommendations.tracks[0].album.images?.[1].url)
     })
-  })
+  }, [])
 
   const openSettingsDialog = () => {
     setIsSettingsDialogOpen(true);
@@ -33,7 +34,7 @@ const HomePage = () => {
             open={isSettingsDialogOpen}
             closeDialog={closeSettingsDialog}
           />
-          <MusicCard image="image" title="LCD Soundsystem" subtitle="artist" />
+          <MusicCard image={image} title="LCD Soundsystem" subtitle="artist" />
         </div>
       </Layout>
     </div>
