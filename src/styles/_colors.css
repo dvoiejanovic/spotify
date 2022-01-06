@@ -15,9 +15,13 @@
   --sidebar-active-item-color: var(--dire-wolf);
   --sidebar-bg-color: var(--black);
 
+  --card-bg-negative-color: var(--white);
+  --main-bg-negative-color: var(--white);
+
   /* Text */
   --accent-text-color: var(--white);
   --subtle-text-color: var(--tangled-web);
+  --subtle-text-negative-color: var(--champion-blue);
 }
 
 [data-theme='light'] {
@@ -26,7 +30,11 @@
   --sidebar-active-item-color: #f7f7f7;
   --sidebar-bg-color: var(--crystal-bell);
 
+  --card-bg-negative-color: var(--black);
+  --main-bg-negative-color: var(--thamar-black);
+
   /* Text */
   --accent-text-color: var(--black);
   --subtle-text-color: var(--champion-blue);
+  --subtle-text-negative-color: var(--tangled-web);
 }

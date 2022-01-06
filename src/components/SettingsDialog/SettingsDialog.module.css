@@ -6,8 +6,13 @@
 
 .themeExampleCard {
   padding: 8px 24px;
+  background-color: var(--main-bg-color);
   margin: 16px 0px;
   width: 100%;
-  border: 1px solid white;
   border-radius: 8px;
+}
+
+.negativeThemeExampleCard {
+  background-color: var(--main-bg-negative-color);
+  color: var(--subtle-text-negative-color);
 }

@@ -14,19 +14,17 @@ const Dialog: React.FC<IDialogProps> = (props) => {
 
   useEffect(() => {
     setIsOpen(props.open);
-  }, [props.open])
+  }, [props.open]);
 
   if (isOpen) {
     return (
-      <div className={styles.backdrop}>
-        <div className={styles.dialog}>
+      <div className={styles.backdrop} onClick={props.onClose}>
+        <div className={styles.dialog} onClick={(event) => event.stopPropagation()}>
           <div className={styles.dialogHeader}>
             {props.title}
             <FiX onClick={props.onClose} />
           </div>
-          <div className={styles.dialogContent}>
-            {props.children}
-          </div>
+          <div className={styles.dialogContent}>{props.children}</div>
         </div>
       </div>
     );
