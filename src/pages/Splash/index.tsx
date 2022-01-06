@@ -1,17 +1,17 @@
 import { login } from "services/authentication";
-import styles from "./Splash.module.scss";
+import "./Splash.scoped.scss";
 
 const SplashPage = () => {
   return (
-    <div className={styles.splash_page}>
-      <div className={styles.splash_content}>
+    <div className="splash_page">
+      <div className="splash_content">
         Spotify Project
-        <button type="button" className={styles.login_button} onClick={login}>
+        <button type="button" className="login_button" onClick={login}>
           Jump right in
         </button>
       </div>
-      <footer className={styles.splash_footer}>
-        <span className={styles.splash_footer_text}>Created by</span>
+      <footer className="splash_footer">
+        <span className="splash_footer_text">Created by</span>
         <a href="https://github.com/dvoiejanovic" target="_blank" rel="noopener noreferrer">Ivo Dejanović</a>
       </footer>
     </div>

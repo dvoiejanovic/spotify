@@ -1,6 +1,6 @@
 import { ReactNode, useEffect, useState } from "react";
 import { FiX } from "react-icons/fi";
-import styles from "./Dialog.module.scss";
+import "./Dialog.scoped.scss";
 
 interface IDialogProps {
   open: boolean;
@@ -18,13 +18,13 @@ const Dialog: React.FC<IDialogProps> = (props) => {
 
   if (isOpen) {
     return (
-      <div className={styles.backdrop} onClick={props.onClose}>
-        <div className={styles.dialog} onClick={(event) => event.stopPropagation()}>
-          <div className={styles.dialogHeader}>
+      <div className="backdrop" onClick={props.onClose}>
+        <div className="dialog" onClick={(event) => event.stopPropagation()}>
+          <div className="dialogHeader">
             {props.title}
             <FiX className="clickable-icon" onClick={props.onClose} />
           </div>
-          <div className={styles.dialogContent}>{props.children}</div>
+          <div className="dialogContent">{props.children}</div>
         </div>
       </div>
     );

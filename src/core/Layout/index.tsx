@@ -1,14 +1,14 @@
 import { ReactNode } from "react";
 import Sidebar from "core/Sidebar";
 import Topbar from "core/Topbar";
-import styles from './Layout.module.scss';
+import './Layout.scoped.scss';
 
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
-    <div className={styles.layout}>
+    <div className="layout">
       <Topbar />
       <Sidebar/>
-      <main className={styles.content}>
+      <main className="content">
         {children}
       </main>
     </div>

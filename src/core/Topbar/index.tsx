@@ -1,13 +1,13 @@
-import styles from "./Topbar.module.scss";
+import "./Topbar.scoped.scss";
 import { FiUser, FiChevronDown } from "react-icons/fi";
 
 const Topbar = () => {
   return (
-    <div className={styles.topbar}>
-      <div className={styles.userBadge}>
-        <FiUser className={styles.userIcon} />
+    <div className="topbar">
+      <div className="userBadge">
+        <FiUser className="userIcon" />
         Username
-        <FiChevronDown className={styles.chevronIcon} />
+        <FiChevronDown className="chevronIcon" />
       </div>
     </div>
   )

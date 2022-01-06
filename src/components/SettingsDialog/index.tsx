@@ -5,7 +5,7 @@ import {
   setTheme as setLocalTheme,
 } from "services/local-storage";
 import { getUserProfile } from "services/spotify";
-import styles from "./SettingsDialog.module.scss";
+import "./SettingsDialog.scoped.scss";
 
 interface ISettingsDialogProps {
   open: boolean;
@@ -32,14 +32,14 @@ const SettingsDialog: React.FC<ISettingsDialogProps> = (
 
   const changeTheme = (theme: "dark" | "light") => {
     setTheme(theme);
+    setLocalTheme(theme);
     const body = document.querySelector("body");
     (body as HTMLBodyElement).dataset.theme = theme;
-    setLocalTheme(theme);
   };
 
   return (
     <Dialog open={props.open} onClose={props.closeDialog} title="Settings">
-      <div className={styles.message}>
+      <div className="message">
         Choose between different themes to change the look and feel of your app.
       </div>
       <label htmlFor="dark-theme-radio-button">Dark </label>
@@ -51,12 +51,12 @@ const SettingsDialog: React.FC<ISettingsDialogProps> = (
         onChange={() => changeTheme("dark")}
       />
       <div
-        className={`${styles.themeExampleCard} ${styles.darkThemeExampleCard}`}
+        className="themeExampleCard darkThemeExampleCard"
       >
-        <img className={styles.avatar} src={avatar} alt="" />
+        <img className="avatar" src={avatar} alt="" />
         <div>
-          <div className={styles.darkUsername}>{username}</div>
-          <div className={styles.darkThemeDescription}>
+          <div className="darkUsername">{username}</div>
+          <div className="darkThemeDescription">
             I live in a world of darkness.
           </div>
         </div>
@@ -70,12 +70,12 @@ const SettingsDialog: React.FC<ISettingsDialogProps> = (
         onChange={() => changeTheme("light")}
       />
       <div
-        className={`${styles.themeExampleCard} ${styles.lightThemeExampleCard}`}
+        className="themeExampleCard lightThemeExampleCard"
       >
-        <img className={styles.avatar} src={avatar} alt="" />
+        <img className="avatar" src={avatar} alt="" />
         <div>
-          <div className={styles.lightUsername}>{username}</div>
-          <div className={styles.lightThemeDescription}>
+          <div className="lightUserName">{username}</div>
+          <div className="lightThemeDescription">
             Light as a feather.
           </div>
         </div>
