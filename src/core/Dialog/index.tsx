@@ -20,11 +20,11 @@ const Dialog: React.FC<IDialogProps> = (props) => {
     return (
       <div className="backdrop" onClick={props.onClose}>
         <div className="dialog" onClick={(event) => event.stopPropagation()}>
-          <div className="dialogHeader">
+          <div className="dialog-header">
             {props.title}
             <FiX className="clickable-icon" onClick={props.onClose} />
           </div>
-          <div className="dialogContent">{props.children}</div>
+          <div className="dialog-content">{props.children}</div>
         </div>
       </div>
     );

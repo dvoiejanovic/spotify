@@ -3,15 +3,15 @@ import "./Splash.scoped.scss";
 
 const SplashPage = () => {
   return (
-    <div className="splash_page">
-      <div className="splash_content">
+    <div className="splash-page">
+      <div className="splash-content">
         Spotify Project
-        <button type="button" className="login_button" onClick={login}>
+        <button type="button" className="login-button" onClick={login}>
           Jump right in
         </button>
       </div>
-      <footer className="splash_footer">
-        <span className="splash_footer_text">Created by</span>
+      <footer className="splash-footer">
+        <span className="splash-footer-text">Created by</span>
         <a href="https://github.com/dvoiejanovic" target="_blank" rel="noopener noreferrer">Ivo Dejanović</a>
       </footer>
     </div>

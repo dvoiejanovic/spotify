@@ -11,11 +11,11 @@
   background-color: var(--sidebar-bg-color);
 }
 
-.activeNavItem {
+.active-nav-item {
   background-color: var(--sidebar-active-item-color);
 }
 
-.navItem {
+.nav-item {
   display: flex;
   padding: 8px 0px 8px 16px;
   border-radius: 4px;
@@ -25,19 +25,19 @@
   align-items: center;
   color: var(--subtle-text-color);
   width: calc(100% - 16px);
+
+  &:hover {
+    cursor: pointer;
+    color: var(--accent-text-color);
+
+    .sidebar-icon {
+      color: var(--accent-text-color);
+    }    
+  }
 }
 
-.navItem:hover {
-  cursor: pointer;
-  color: var(--accent-text-color);
-}
-
-.sidebarIcon {
+.sidebar-icon {
   color: var(--subtle-text-color);
   width: 24px;
   height: 24px;
-}
-
-.navItem:hover .sidebarIcon {
-  color: var(--accent-text-color);
 }

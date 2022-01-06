@@ -4,10 +4,10 @@ import { FiUser, FiChevronDown } from "react-icons/fi";
 const Topbar = () => {
   return (
     <div className="topbar">
-      <div className="userBadge">
-        <FiUser className="userIcon" />
+      <div className="user-badge">
+        <FiUser className="user-icon" />
         Username
-        <FiChevronDown className="chevronIcon" />
+        <FiChevronDown className="chevron-icon" />
       </div>
     </div>
   )

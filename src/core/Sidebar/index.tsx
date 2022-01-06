@@ -6,7 +6,7 @@ const Sidebar: React.FC = () => {
   const [activeNavItemIndex, setActiveNavItemIndex] = useState(1);
 
   const isActive = (index: number) => {
-   return activeNavItemIndex === index ? "activeNavItem" : '';
+   return activeNavItemIndex === index ? "active-nav-item" : '';
   }
 
   const onNavItemClick = (index: number) => {
@@ -15,11 +15,11 @@ const Sidebar: React.FC = () => {
   
   return (
     <aside className="sidebar">
-      <button className={`navItem ${isActive(0)}`} onClick={() => onNavItemClick(0)}>
-        <FiHome className="sidebarIcon" /> Home
+      <button className={`nav-item ${isActive(0)}`} onClick={() => onNavItemClick(0)}>
+        <FiHome className="sidebar-icon" /> Home
       </button>
-      <button className={`navItem ${isActive(1)}`} onClick={() => onNavItemClick(1)}>
-        <FiSearch className="sidebarIcon" /> Search
+      <button className={`nav-item ${isActive(1)}`} onClick={() => onNavItemClick(1)}>
+        <FiSearch className="sidebar-icon" /> Search
       </button>
     </aside>
   );

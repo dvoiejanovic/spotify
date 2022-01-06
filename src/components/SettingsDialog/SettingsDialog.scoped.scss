@@ -4,7 +4,7 @@
   margin-bottom: 16px;
 }
 
-.themeExampleCard {
+.theme-example-card {
   padding: 24px;
   margin: 16px 0px;
   width: 100%;
@@ -13,12 +13,12 @@
   border-radius: 8px;
 }
 
-.lightThemeExampleCard {
+.light-theme-example-card {
   background-color: #fafafa;
   color: var(--champion-blue);
 }
 
-.darkThemeExampleCard {
+.dark-theme-example-card {
   background-color: var(--chinese-black);
   color: var(--tangled-web);
 }
@@ -29,18 +29,18 @@
   border-radius: 8px;
 }
 
-.darkUsername {
+.dark-username {
   color: var(--white);
 }
 
-.darkThemeDescription {
+.dark-theme-description {
   color: var(--tangled-web);
 }
 
-.lightUsername {
+.light-username {
   color: var(--black);
 }
 
-.lightThemeDescription {
+.light-theme-description {
   color: var(--champion-blue);
 }

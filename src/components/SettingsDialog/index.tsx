@@ -51,12 +51,12 @@ const SettingsDialog: React.FC<ISettingsDialogProps> = (
         onChange={() => changeTheme("dark")}
       />
       <div
-        className="themeExampleCard darkThemeExampleCard"
+        className="theme-example-card dark-theme-example-card"
       >
         <img className="avatar" src={avatar} alt="" />
         <div>
-          <div className="darkUsername">{username}</div>
-          <div className="darkThemeDescription">
+          <div className="dark-username">{username}</div>
+          <div className="dark-theme-description">
             I live in a world of darkness.
           </div>
         </div>
@@ -70,12 +70,12 @@ const SettingsDialog: React.FC<ISettingsDialogProps> = (
         onChange={() => changeTheme("light")}
       />
       <div
-        className="themeExampleCard lightThemeExampleCard"
+        className="theme-example-card light-theme-example-card"
       >
         <img className="avatar" src={avatar} alt="" />
         <div>
-          <div className="lightUserName">{username}</div>
-          <div className="lightThemeDescription">
+          <div className="light-username">{username}</div>
+          <div className="light-theme-description">
             Light as a feather.
           </div>
         </div>
