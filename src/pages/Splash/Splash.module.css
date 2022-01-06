@@ -1,7 +1,7 @@
-@import '../../styles/_colors.css';
+@import 'styles/_colors.css';
 
 .splash_page {
-  background: url('../../assets/abstract.jpeg');
+  background: url('assets/abstract.jpeg');
   background-size: cover;
   color: white;
   display: grid;

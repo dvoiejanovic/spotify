@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { storeAccessToken } from "../../services/authentication";
+import { storeAccessToken } from "services/authentication";
 import { useNavigate } from "react-router-dom";
 
 const RedirectPage = () => {

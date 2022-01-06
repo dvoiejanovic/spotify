@@ -1,6 +1,6 @@
 import { useState } from "react";
-import SettingsDialog from "../../components/SettingsDialog";
-import Layout from "../../core/Layout";
+import SettingsDialog from "components/SettingsDialog";
+import Layout from "core/Layout";
 
 const HomePage = () => {
   const [isSettingsDialogOpen, setIsSettingsDialogOpen] =

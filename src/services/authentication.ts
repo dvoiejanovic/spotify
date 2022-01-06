@@ -1,4 +1,4 @@
-import { camelize } from "../helpers/string";
+import { camelize } from "helpers/string";
 
 export const login = (): void => {
   const { REACT_APP_CLIENT_ID, REACT_APP_AUTHORIZATION_URL } = process.env;

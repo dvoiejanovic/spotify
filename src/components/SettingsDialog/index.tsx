@@ -1,7 +1,10 @@
-import { useEffect, useState } from "react";
-import Dialog from "../../core/Dialog";
-import { getTheme, setTheme as setLocalTheme } from "../../services/local-storage";
-import { getUserProfile } from "../../services/spotify";
+import { useCallback, useEffect, useState } from "react";
+import Dialog from "core/Dialog";
+import {
+  getTheme,
+  setTheme as setLocalTheme,
+} from "services/local-storage";
+import { getUserProfile } from "services/spotify";
 import styles from "./SettingsDialog.module.css";
 
 interface ISettingsDialogProps {
@@ -9,29 +12,29 @@ interface ISettingsDialogProps {
   closeDialog: () => void;
 }
 
-const SettingsDialog: React.FC<ISettingsDialogProps> = (props) => {
+const SettingsDialog: React.FC<ISettingsDialogProps> = (
+  props: ISettingsDialogProps
+) => {
   const [theme, setTheme] = useState(getTheme());
   const [username, setUsername] = useState();
   const [avatar, setAvatar] = useState();
 
-  const fetchUserAvatar = () => {
+  const fetchUserAvatar = useCallback(() => {
     getUserProfile().then((userProfile) => {
-      setAvatar(userProfile.images[0].url);
+      setAvatar(userProfile.images?.[0].url);
       setUsername(userProfile.display_name);
     });
-  }
+  }, []);
 
   useEffect(() => {
     fetchUserAvatar();
   }, [fetchUserAvatar]);
 
-
-
   const changeTheme = (theme: "dark" | "light") => {
     setTheme(theme);
-    const body = document.querySelector('body');
+    const body = document.querySelector("body");
     (body as HTMLBodyElement).dataset.theme = theme;
-    setLocalTheme(theme)
+    setLocalTheme(theme);
   };
 
   return (
@@ -44,14 +47,18 @@ const SettingsDialog: React.FC<ISettingsDialogProps> = (props) => {
         id="dark-theme-radio-button"
         type="radio"
         value="dark"
-        checked={theme === 'dark'}
+        checked={theme === "dark"}
         onChange={() => changeTheme("dark")}
       />
-      <div className={`${styles.themeExampleCard} ${styles.darkThemeExampleCard}`}>
-        <img className={styles.avatar} src={avatar} alt=""/>
+      <div
+        className={`${styles.themeExampleCard} ${styles.darkThemeExampleCard}`}
+      >
+        <img className={styles.avatar} src={avatar} alt="" />
         <div>
           <div className={styles.darkUsername}>{username}</div>
-          <div className={styles.darkThemeDescription}>I live in a world of darkness.</div>
+          <div className={styles.darkThemeDescription}>
+            I live in a world of darkness.
+          </div>
         </div>
       </div>
       <label htmlFor="Light-theme-radio-button">Light </label>
@@ -59,14 +66,18 @@ const SettingsDialog: React.FC<ISettingsDialogProps> = (props) => {
         id="light-themeradio-button"
         type="radio"
         value="light"
-        checked={theme === 'light'}
+        checked={theme === "light"}
         onChange={() => changeTheme("light")}
       />
-      <div className={`${styles.themeExampleCard} ${styles.lightThemeExampleCard}`}>
-        <img className={styles.avatar} src={avatar} alt=""/>
+      <div
+        className={`${styles.themeExampleCard} ${styles.lightThemeExampleCard}`}
+      >
+        <img className={styles.avatar} src={avatar} alt="" />
         <div>
           <div className={styles.lightUsername}>{username}</div>
-          <div className={styles.lightThemeDescription}>Light as a feather.</div>
+          <div className={styles.lightThemeDescription}>
+            Light as a feather.
+          </div>
         </div>
       </div>
     </Dialog>

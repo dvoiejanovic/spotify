@@ -1,4 +1,4 @@
-import { login } from "../../services/authentication";
+import { login } from "services/authentication";
 import styles from "./Splash.module.css";
 
 const SplashPage = () => {
